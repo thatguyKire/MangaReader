@@ -1,0 +1,161 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+  font-family: Arial, sans-serif;
+  background-image: url('images/JAPER.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh; /* Ensure the body covers at least the height of the viewport */
+  position: relative; /* Needed for the footer positioning */
+}
+
+/* Header styles */
+header {
+  background-color: #333;
+  color: white;
+  padding: 1em;
+  text-align: center;
+}
+
+/* Navigation styles */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  text-decoration: underline;
+  color: #ffc107; /* Change the color on hover */
+}
+
+/* Main styles */
+main {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8); /* Add background color with opacity for better readability */
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  min-height: calc(100vh - 170px); /* Subtract the height of the footer (70px) and some extra spacing */
+}
+/* Intro section styles */
+.intro {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Content section styles */
+.content {
+  text-align: center;
+}
+
+/* Manga container styles */
+.manga-container {
+  max-height: 500px; /* Adjust as needed */
+  overflow-y: auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Individual manga image styles */
+.manga-container a {
+  display: inline-block;
+  margin: 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.manga-container img {
+  width: 150px; /* Adjust as needed */
+  height: auto;
+  border-radius: 8px;
+}
+/* Footer styles */
+footer {
+  position: absolute; /* Position the footer absolutely */
+  bottom: 0; /* Stick it to the bottom */
+  width: 100%; /* Take up the full width */
+  text-align: center;
+  padding: 10px;
+  background-color: #333;
+  color: white;
+}
+
+.genres {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.genres a {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 10px;
+  background-color: #333;
+  color: white;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  font-size: 16px;
+}
+
+.genres a:hover {
+  background-color: #555;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.6; /* Adjust line height for better readability */
+  margin-bottom: 20px; /* Add some space below the paragraph */
+}
+
+/* Tooltip container */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 200px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -100px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
